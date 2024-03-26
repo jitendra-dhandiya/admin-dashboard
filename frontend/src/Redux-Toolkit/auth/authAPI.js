@@ -3,7 +3,7 @@
 export function createUserAPI(userData) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch("http://localhost:5000/api/user/register", {
+      const response = await fetch("https://admin-dashboard-api-mu.vercel.app/api/user/register", {
         method: "POST",
         body: JSON.stringify(userData),
         headers: { "content-type": "application/json" },
@@ -24,7 +24,7 @@ export function createUserAPI(userData) {
 export function loginUserAPI(loginInfo) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch("http://localhost:5000/api/user/login", {
+      const response = await fetch("https://admin-dashboard-api-mu.vercel.app/api/user/login", {
         method: "POST",
         body: JSON.stringify(loginInfo),
         headers: { "content-type": "application/json" },
